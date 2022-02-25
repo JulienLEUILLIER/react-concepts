@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ComponentReducer from './ComponentReducer';
+import questions from './questions';
+import Question from './Question';
+import Counter from './Counter';
+import Application from './DogFacts/Application';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ComponentReducer />
+      {questions.map(q => (
+        <Question question={q.question} answer={q.answer} key={q.id}/>
+      ))}
+
+      <Counter />
+      <Application />
+    </>
   );
 }
 
