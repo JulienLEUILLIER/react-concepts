@@ -6,6 +6,7 @@ import Counter from './Counter';
 import Application from './DogFacts/Application';
 import CounterReducer from './CounterReducer';
 import ColorAndContext from './ColorAndContext/ColorAndContext';
+import { ThemeProvider } from './ColorAndContext/theme-context';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
       <Counter />
       <Application />
       <CounterReducer />
-      <ColorAndContext />
+      <ThemeProvider>
+        <ColorAndContext />
+      </ThemeProvider>
     </>
   );
 }
