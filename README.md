@@ -1,4 +1,4 @@
-# Leaning and practicing various React concepts
+# Learning and practicing various React concepts
 
 Reducers, Typing
 
