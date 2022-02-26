@@ -4,6 +4,8 @@ import questions from './questions';
 import Question from './Question';
 import Counter from './Counter';
 import Application from './DogFacts/Application';
+import CounterReducer from './CounterReducer';
+import ColorAndContext from './ColorAndContext/ColorAndContext';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
 
       <Counter />
       <Application />
+      <CounterReducer />
+      <ColorAndContext />
     </>
   );
 }
