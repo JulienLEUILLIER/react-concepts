@@ -1,13 +1,12 @@
+import { useContext } from 'react';
+import { RGBContext } from './RGBContextProvider';
 import { ColorInput } from './ColorInput';
-import { AdjustmentAction } from './reducer';
-import { RGBColorType } from './types';
 import { adjustBlue, adjustGreen, adjustRed } from './utilities';
 
-interface ColorInputsProps extends RGBColorType {
-  dispatch: React.Dispatch<AdjustmentAction>
-}
+const ColorInputs = () => {
 
-export const ColorInputs = ({ red, green, blue, dispatch }: ColorInputsProps) => {
+  const { red, green, blue, dispatch } = useContext(RGBContext)
+
   return (
     <section className="color-inputs">
       <ColorInput id="red-input" label="Red" value={red} onChange={(event) => adjustRed(event, dispatch)} />
@@ -16,3 +15,5 @@ export const ColorInputs = ({ red, green, blue, dispatch }: ColorInputsProps) =>
     </section>
   );
 };
+
+export default ColorInputs

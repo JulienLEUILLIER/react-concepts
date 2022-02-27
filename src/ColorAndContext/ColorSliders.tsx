@@ -1,14 +1,11 @@
-import React from 'react';
 import { ColorSlider } from './ColorSlider';
-import { AdjustmentAction } from './reducer';
-import { RGBColorType } from './types';
 import { adjustBlue, adjustGreen, adjustRed } from './utilities';
+import { useContext } from 'react';
+import { RGBContext } from './RGBContextProvider';
 
-interface ColorSliderProps extends RGBColorType {
-  dispatch: React.Dispatch<AdjustmentAction>;
-}
+const ColorSliders = () => {
 
-export const ColorSliders = ({ red, green, blue, dispatch }: ColorSliderProps) => {
+  const { red, green, blue, dispatch } = useContext(RGBContext)
 
   return (
     <section className="color-sliders">
@@ -33,3 +30,5 @@ export const ColorSliders = ({ red, green, blue, dispatch }: ColorSliderProps) =
     </section>
   );
 };
+
+export default ColorSliders

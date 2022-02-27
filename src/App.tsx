@@ -13,7 +13,7 @@ function App() {
     <>
       <ComponentReducer />
       {questions.map(q => (
-        <Question question={q.question} answer={q.answer} key={q.id}/>
+        <Question question={q.question} answer={q.answer} key={q.id} />
       ))}
 
       <Counter />
