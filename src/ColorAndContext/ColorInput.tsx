@@ -1,14 +1,7 @@
-import { on } from "events";
 import React from "react";
-
-export interface ColorInputProps {
-    id: string;
-    label: string;
-    value: number;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  }
+import { AdjustmentInputProps } from "./ColorAdjustment.tsx";
   
-  export const ColorInput = ({ id, label, value, onChange }: ColorInputProps) => {
+  export const ColorInput = ({ id, label, value, onChange }: AdjustmentInputProps) => {
     return (
       <div className="color-input">
         <label htmlFor={id}>{label}</label>

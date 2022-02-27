@@ -1,13 +1,8 @@
 import React from "react";
+import { AdjustmentInputProps } from "./ColorAdjustment.tsx";
 
-export interface ColorInputProps {
-    id: string;
-    label: string;
-    value: number;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  }
   
-  export const ColorSlider = ({ id, label, value, onChange }: ColorInputProps) => {
+  export const ColorSlider = ({ id, label, value, onChange }: AdjustmentInputProps) => {
     return (
       <div className="color-slider">
         <label htmlFor={id}>{label}</label>
