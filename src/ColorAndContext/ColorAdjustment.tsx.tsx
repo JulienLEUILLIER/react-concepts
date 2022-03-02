@@ -1,4 +1,4 @@
-import { adjustBlue, adjustGreen, adjustRed } from './utilities';
+import { adjust } from './utilities';
 import { useContext } from 'react';
 import { RGBContext } from './RGBContextProvider';
 
@@ -23,19 +23,19 @@ const ColorAdjustment = ({ Adjustment }: ColorAdjustmentProps) => {
         id="red-slider"
         label="Red"
         value={red}
-        onChange={(event) => adjustRed(event, dispatch)}
+        onChange={(event) => adjust(event, dispatch, 'RED')}
       />
       <Adjustment
         id="green-slider"
         label="Green"
         value={green}
-        onChange={(event) => adjustGreen(event, dispatch)}
+        onChange={(event) => adjust(event, dispatch, 'GREEN')}
       />
       <Adjustment
         id="blue-slider"
         label="Blue"
         value={blue}
-        onChange={(event) => adjustBlue(event, dispatch)}
+        onChange={(event) => adjust(event, dispatch, 'BLUE')}
       />
     </section>
   );

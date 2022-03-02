@@ -1,8 +1,11 @@
 import { RGBColorType } from './types';
 
+export type Colors = 'RED' | 'GREEN' | 'BLUE';
+
+type ActionType = `ADJUST_${Colors}`;
 
 export type AdjustmentAction = {
-  type: 'ADJUST_RED' | 'ADJUST_GREEN' | 'ADJUST_BLUE';
+  type: ActionType;
   payload: number;
 };
 
